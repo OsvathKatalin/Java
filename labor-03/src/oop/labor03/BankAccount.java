@@ -2,39 +2,37 @@ package oop.labor03;
 
 public class BankAccount {
 
-    private double egyenleg;
-    private String accountNumber;
+    private final String accountNumber;
+    private double balance;
 
-    public BankAccount(double osszeg){
-        egyenleg=osszeg;
+    public BankAccount( String accountNum){
+        accountNumber=accountNum;
     }
-    public void betesz(double osszeg){
-        egyenleg += osszeg;
+
+    public void deposit( double sum ){
+        balance += sum;
     }
-    public boolean kivesz(double osszeg){
-        if( osszeg<=egyenleg){
-            egyenleg-=osszeg;
+
+    public boolean withdraw( double sum ){
+        if( sum <= balance ){
+            balance -= sum;
             return true;
         }
         return false;
     }
-    public double getEgyenleg(){
-        return egyenleg;
+
+    public double getBalance(){
+        return balance;
     }
 
-    public String getAccountNumber() {
+    public String getAccountNumber(){
         return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
     }
 
     @Override
     public String toString() {
-        return "BankAccount{" +
-                "egyenleg=" + egyenleg +
-                ", accountNumber='" + accountNumber + '\'' +
+        return "'" + accountNumber + '\'' +
+                ", balance=" + balance +
                 '}';
     }
 

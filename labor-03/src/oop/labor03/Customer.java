@@ -1,15 +1,14 @@
 package oop.labor03;
 
-public class Costumer {
-
+public class Customer {
     private String firstName;
     private String lastName;
     private BankAccount account;
 
-    public Costumer(String firstName, String lastName, BankAccount account) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.account = account;
+    public Customer(String fName, String lName)
+    {
+        firstName=fName;
+        lastName=lName;
     }
 
     public void setAccount(BankAccount account) {
@@ -32,18 +31,17 @@ public class Costumer {
         this.lastName = lastName;
     }
 
-    public void closeAccount(){
+    public void closeAccount()
+    {
         this.account=null;
     }
 
     @Override
     public String toString() {
-        return "Costumer{" +
+        return "Customer{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", account=" + account +
                 '}';
     }
-
-
 }
