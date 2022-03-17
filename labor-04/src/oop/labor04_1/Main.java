@@ -33,7 +33,8 @@ public class Main {
                 String firstName = items[0].trim();
                 String lastName = items[1].trim();
 // Convert String → int: Integer.parseInt( String)
-                int birtYear = Integer.parseInt(items[2].trim()); persons.add(new Person(firstName, lastName, birtYear));
+                int birtYear = Integer.parseInt(items[2].trim());
+                persons.add(new Person(firstName, lastName, birtYear));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
